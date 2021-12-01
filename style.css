@@ -1,12 +1,152 @@
-/* iframe {
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* body {
+  font-family: 
+    line-height:
+  color: ;
+} */
+
+img,
+video {
+  /* display: block; */
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
-} */
+  margin-top: 5px;
+}
 
-/* img,
 video {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
+  margin-top: 5px;
+}
+
+p {
+  padding-bottom: 5px;
+}
+/* ---------------------Section Grid------------------- */
+
+.section_1 {
+  display: grid;
+  place-items: center;
+  background: #8e7eb3;
+}
+
+.splash2,
+.splash1 {
+  grid-area: 1/1;
+}
+
+.splash2 {
+  font-size: 30px;
+  color: orange;
+}
+
+@media (min-width: 700px) {
+  .splash2 {
+    font-size: 60px;
+  }
+}
+
+/* ___________________________ */
+
+.section_2 {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+  gap: 1rem;
+  padding-block: 3rem;
+  background: #8e7eb3;
+}
+
+.section_2 p,
+.section_4 p {
+  padding-right: 10px;
+}
+
+.section_2 article,
+.section_4 article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-column: 2;
+  /* align-items: center; */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.section_3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 1200px));
+  justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  gap: 1rem;
+  padding-block: 3rem;
+  background: rgb(216, 193, 158);
+}
+
+.section_4 {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+  gap: 1rem;
+  padding-block: 3rem;
+  background: #8e7eb3;
+}
+
+.section_5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 1200px));
+  justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  gap: 1rem;
+  padding-block: 3rem;
+  background: rgb(216, 193, 158);
+}
+
+footer {
+  display: grid;
+  place-content: center;
+  color: #fff;
+  padding: 2rem 1rem;
+  background: rgb(8, 83, 18);
+  font-weight: 600;
+}
+
+header nav ul {
+  background: rgb(49, 49, 49);
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+header li {
+  padding: 10px;
+  list-style: none;
+}
+
+header a {
+  color: rgb(216, 193, 158);
+}
+
+header a:link {
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #f7931e;
+}
